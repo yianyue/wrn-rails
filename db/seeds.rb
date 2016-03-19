@@ -12,17 +12,17 @@ User.delete_all
 
 users = User.create([
   {
-    name: 'Yi An', 
-    email: 'yianyue@gmail.com', 
-    goal: 3, 
-    password: 'password', 
+    name: 'Yi An',
+    email: 'yianyue@gmail.com',
+    goal: 3,
+    password: 'password',
     password_confirmation: 'password'
   },
   {
-    name: 'Franz', 
-    email: 'kafka@gmail.com', 
-    goal: 500, 
-    password: 'password', 
+    name: 'Franz',
+    email: 'kafka@gmail.com',
+    goal: 500,
+    password: 'password',
     password_confirmation: 'password'
   },
 ])
@@ -35,16 +35,16 @@ contents_1 = [
 ]
 
 contents_2 = [
-'<div>One morning, when Gregor Samsa woke from troubled dreams, he found
+'One morning, when Gregor Samsa woke from troubled dreams, he found
 himself transformed in his bed into a horrible vermin.  He lay on
 his armour-like back, and if he lifted his head a little he could
 see his brown belly, slightly domed and divided by arches into stiff
 sections.  The bedding was hardly able to cover it and seemed ready
 to slide off any moment.  His many legs, pitifully thin compared
 with the size of the rest of him, waved about helplessly as he
-looked.</div><br>
+looked.\r\n
 
-<div>"What\'s happened to me?" he thought.  It wasn\'t a dream.  His room,
+"What\'s happened to me?" he thought.  It wasn\'t a dream.  His room,
 a proper human room although a little too small, lay peacefully
 between its four familiar walls.  A collection of textile samples
 lay spread out on the table - Samsa was a travelling salesman - and
@@ -52,9 +52,9 @@ above it there hung a picture that he had recently cut out of an
 illustrated magazine and housed in a nice, gilded frame.  It showed
 a lady fitted out with a fur hat and fur boa who sat upright,
 raising a heavy fur muff that covered the whole of her lower arm
-towards the viewer.</div><br>
+towards the viewer.\r\n
 
-<div>Gregor then turned to look out the window at the dull weather.
+Gregor then turned to look out the window at the dull weather.
 Drops of rain could be heard hitting the pane, which made him feel
 quite sad.  "How about if I sleep a little bit longer and forget all
 this nonsense", he thought, but that was something he was unable to
@@ -64,9 +64,9 @@ himself onto his right, he always rolled back to where he was.  He
 must have tried it a hundred times, shut his eyes so that he
 wouldn\'t have to look at the floundering legs, and only stopped when
 he began to feel a mild, dull pain there that he had never felt
-before.</div><br>
+before.\r\n
 
-<div>"Oh, God", he thought, "what a strenuous career it is that I\'ve
+"Oh, God", he thought, "what a strenuous career it is that I\'ve
 chosen! Travelling day in and day out.  Doing business like this
 takes much more effort than doing your own business at home, and on
 top of that there\'s the curse of travelling, worries about making
@@ -78,9 +78,9 @@ towards the headboard so that he could lift his head better; found
 where the itch was, and saw that it was covered with lots of little
 white spots which he didn\'t know what to make of; and when he tried
 to feel the place with one of his legs he drew it quickly back
-because as soon as he touched it he was overcome by a cold shudder.</div><br>
+because as soon as he touched it he was overcome by a cold shudder.\r\n
 
-<div>He slid back into his former position.  "Getting up early all the
+He slid back into his former position.  "Getting up early all the
 time", he thought, "it makes you stupid.  You\'ve got to get enough
 sleep.  Other travelling salesmen live a life of luxury.  For
 instance, whenever I go back to the guest house during the morning
@@ -98,9 +98,9 @@ hard of hearing.  Well, there\'s still some hope; once I\'ve got the
 money together to pay off my parents\' debt to him - another five or
 six years I suppose - that\'s definitely what I\'ll do.  That\'s when
 I\'ll make the big change.  First of all though, I\'ve got to get up,
-my train leaves at five."</div><br>
+my train leaves at five."\r\n
 ',
-'<div>And he looked over at the alarm clock, ticking on the chest of
+'And he looked over at the alarm clock, ticking on the chest of
 drawers.  "God in Heaven!" he thought.  It was half past six and the
 hands were quietly moving forwards, it was even later than half
 past, more like quarter to seven.  Had the alarm clock not rung? He
@@ -125,9 +125,9 @@ doctor\'s recommendation not to make any claim as the doctor believed
 that no-one was ever ill but that many were workshy.  And what\'s
 more, would he have been entirely wrong in this case? Gregor did in
 fact, apart from excessive sleepiness after sleeping for so long,
-feel completely well and even felt much hungrier than usual.</div><br>
+feel completely well and even felt much hungrier than usual.\r\n
 
-<div>He was still hurriedly thinking all this through, unable to decide
+He was still hurriedly thinking all this through, unable to decide
 to get out of the bed, when the clock struck quarter to seven.
 There was a cautious knock at the door near his head.  "Gregor",
 somebody called - it was his mother - "it\'s quarter to seven.
@@ -157,8 +157,8 @@ his breakfast, but his sister whispered: "Gregor, open the door, I
 beg of you."  Gregor, however, had no thought of opening the door,
 and instead congratulated himself for his cautious habit, acquired
 from his travelling, of locking all doors at night even when he was
-at home.</div><br>',
-'<div>It was a simple matter to throw off the covers; he only had to blow
+at home.\r\n',
+'It was a simple matter to throw off the covers; he only had to blow
 himself up a little and they fell off by themselves.  But it became
 difficult after that, especially as he was so exceptionally broad.
 He would have used his arms and his hands to push himself up; but
@@ -169,18 +169,18 @@ one that would stretch itself out; and if he finally managed to do
 what he wanted with that leg, all the others seemed to be set free
 and would move about painfully.  "This is something that can\'t be
 done in bed", Gregor said to himself, "so don\'t keep trying to do
-it".</div><br>
+it".\r\n
 
-<div>The first thing he wanted to do was get the lower part of his body
+The first thing he wanted to do was get the lower part of his body
 out of the bed, but he had never seen this lower part, and could not
 imagine what it looked like; it turned out to be too hard to move;
 it went so slowly; and finally, almost in a frenzy, when he
 carelessly shoved himself forwards with all the force he could
 gather, he chose the wrong direction, hit hard against the lower
 bedpost, and learned from the burning pain he felt that the lower
-part of his body might well, at present, be the most sensitive.</div><br>
+part of his body might well, at present, be the most sensitive.\r\n
 
-<div>So then he tried to get the top part of his body out of the bed
+So then he tried to get the top part of his body out of the bed
 first, carefully turning his head to the side.  This he managed
 quite easily, and despite its breadth and its weight, the bulk of
 his body eventually followed slowly in the direction of the head.
@@ -189,9 +189,9 @@ fresh air it occurred to him that if he let himself fall it would be
 a miracle if his head were not injured, so he became afraid to carry
 on pushing himself forward the same way.  And he could not knock
 himself out now at any price; better to stay in bed than lose
-consciousness.</div><br>
+consciousness.\r\n
 
-<div>It took just as much effort to get back to where he had been
+It took just as much effort to get back to where he had been
 earlier, but when he lay there sighing, and was once more watching
 his legs as they struggled against each other even harder than
 before, if that was possible, he could think of no way of bringing
@@ -208,9 +208,9 @@ to offer him.  "Seven o\'clock, already", he said to himself when the
 clock struck again, "seven o\'clock, and there\'s still a fog like
 this."  And he lay there quietly a while longer, breathing lightly
 as if he perhaps expected the total stillness to bring things back
-to their real and natural state.</div><br>
+to their real and natural state.\r\n
 ',
-'<div>But then he said to himself: "Before it strikes quarter past seven
+'But then he said to himself: "Before it strikes quarter past seven
 I\'ll definitely have to have got properly out of bed.  And by then
 somebody will have come round from work to ask what\'s happened to me
 as well, as they open up at work before seven o\'clock."  And so he
@@ -221,9 +221,9 @@ probably avoid injuring it.  His back seemed to be quite hard, and
 probably nothing would happen to it falling onto the carpet.  His
 main concern was for the loud noise he was bound to make, and which
 even through all the doors would probably raise concern if not
-alarm.  But it was something that had to be risked.</div><br>
+alarm.  But it was something that had to be risked.\r\n
 
-<div>When Gregor was already sticking half way out of the bed - the new
+When Gregor was already sticking half way out of the bed - the new
 method was more of a game than an effort, all he had to do was rock
 back and forth - it occurred to him how simple everything would be
 if somebody came to help him.  Two strong people - he had his father
@@ -234,9 +234,9 @@ careful as he swang over onto the floor, where, hopefully, the
 little legs would find a use.  Should he really call for help
 though, even apart from the fact that all the doors were locked?
 Despite all the difficulty he was in, he could not suppress a smile
-at this thought.</div><br>
+at this thought.\r\n
 
-<div>After a while he had already moved so far across that it would have
+After a while he had already moved so far across that it would have
 been hard for him to keep his balance if he rocked too hard.  The
 time was now ten past seven and he would have to make a final
 decision very soon.  Then there was a ring at the door of the flat.
@@ -265,9 +265,9 @@ really a loud noise.  His fall was softened a little by the carpet,
 and Gregor\'s back was also more elastic than he had thought, which
 made the sound muffled and not too noticeable.  He had not held his
 head carefully enough, though, and hit it as he fell; annoyed and in
-pain, he turned it and rubbed it against the carpet.</div><br>
+pain, he turned it and rubbed it against the carpet.\r\n
 ',
-'<div>"Something\'s fallen down in there", said the chief clerk in the room
+'"Something\'s fallen down in there", said the chief clerk in the room
 on the left.  Gregor tried to imagine whether something of the sort
 that had happened to him today could ever happen to the chief clerk
 too; you had to concede that it was possible.  But as if in gruff
@@ -276,9 +276,9 @@ highly polished boots could now be heard in the adjoining room.
 From the room on his right, Gregor\'s sister whispered to him to let
 him know: "Gregor, the chief clerk is here."  "Yes, I know", said
 Gregor to himself; but without daring to raise his voice loud enough
-for his sister to hear him.</div><br>
+for his sister to hear him.\r\n
 
-<div>"Gregor", said his father now from the room to his left, "the chief
+"Gregor", said his father now from the room to his left, "the chief
 clerk has come round and wants to know why you didn\'t leave on the
 early train.  We don\'t know what to say to him.  And anyway, he
 wants to speak to you personally.  So please open up this door.  I\'m
@@ -307,9 +307,9 @@ unfortunately as you like, we simply have to overcome it because of
 business considerations."  "Can the chief clerk come in to see you
 now then?", asked his father impatiently, knocking at the door
 again.  "No", said Gregor.  In the room on his right there followed
-a painful silence; in the room on his left his sister began to cry.</div><br>
+a painful silence; in the room on his left his sister began to cry.\r\n
 
-<div>So why did his sister not go and join the others? She had probably
+So why did his sister not go and join the others? She had probably
 only just got up and had not even begun to get dressed.  And why was
 she crying? Was it because he had not got up, and had not let the
 chief clerk in, because he was in danger of losing his job and if
@@ -324,9 +324,9 @@ found for it later on, it was not something for which Gregor could
 be sacked on the spot.  And it seemed to Gregor much more sensible
 to leave him now in peace instead of disturbing him with talking at
 him and crying.  But the others didn\'t know what was happening, they
-were worried, that would excuse their behaviour.</div><br>
+were worried, that would excuse their behaviour.\r\n
 ',
-'<div>The chief clerk now raised his voice, "Mr. Samsa", he called to him,
+'The chief clerk now raised his voice, "Mr. Samsa", he called to him,
 "what is wrong? You barricade yourself in your room, give us no more
 than yes or no for an answer, you are causing serious and
 unnecessary concern to your parents and you fail - and I mention
@@ -348,9 +348,9 @@ reason I don\'t see why your parents should not also learn of it.
 Your turnover has been very unsatisfactory of late; I grant you that
 it\'s not the time of year to do especially good business, we
 recognise that; but there simply is no time of year to do no
-business at all,  Mr. Samsa, we cannot allow there to be."</div><br>
+business at all,  Mr. Samsa, we cannot allow there to be."\r\n
 
-<div>"But Sir", called Gregor, beside himself and forgetting all else in
+"But Sir", called Gregor, beside himself and forgetting all else in
 the excitement, "I\'ll open up immediately, just a moment.  I\'m
 slightly unwell, an attack of dizziness, I haven\'t been able to get
 up.  I\'m still in bed now.  I\'m quite fresh again now, though.  I\'m
@@ -367,12 +367,12 @@ of these things.  Maybe you haven\'t read the latest contracts I sent
 in.  I\'ll set off with the eight o\'clock train, as well, these few
 hours of rest have given me strength.  You don\'t need to wait, sir;
 I\'ll be in the office soon after you, and please be so good as to
-tell that to the boss and recommend me to him!"</div><br>
+tell that to the boss and recommend me to him!"\r\n
 ',
 
 '',
 
-'<div>"Did you understand a word of all that?" the chief clerk asked his
+'"Did you understand a word of all that?" the chief clerk asked his
 parents, "surely he\'s not trying to make fools of us". "Oh, God!"
 called his mother, who was already in tears, "he could be seriously
 ill and we\'re making him suffer.  Grete! Grete!" she then cried.
@@ -387,9 +387,9 @@ And the two girls, their skirts swishing, immediately ran out
 through the hall, wrenching open the front door of the flat as they
 went.  How had his sister managed to get dressed so quickly? There
 was no sound of the door banging shut again; they must have left it
-open;  people often do in homes where something awful has happened.</div><br>
+open;  people often do in homes where something awful has happened.\r\n
 
-<div>Gregor, in contrast, had become much calmer.  So they couldn\'t
+Gregor, in contrast, had become much calmer.  So they couldn\'t
 understand his words any more, although they seemed clear enough to
 him, clearer than before - perhaps his ears had become used to the
 sound.  They had realised, though, that there was something wrong
@@ -405,7 +405,7 @@ different from the way that a human coughs and he was no longer sure
 he could judge this for himself.  Meanwhile, it had become very
 quiet in the next room.  Perhaps his parents were sat at the table
 whispering with the chief clerk, or perhaps they were all pressed
-against the door and listening.</div><br>
+against the door and listening.\r\n
 ',
 ]
 
