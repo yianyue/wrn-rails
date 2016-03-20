@@ -1,7 +1,5 @@
 class Entry < ActiveRecord::Base
 
-  # attr_accessor :locked
-
   belongs_to :user
 
   before_create :set_default
@@ -9,6 +7,16 @@ class Entry < ActiveRecord::Base
 
   def attributes
     super.merge( 'locked' => self.locked ) # why doesn't locked:self.locked work?
+  end
+
+  def locked
+    entries = Entry.where(user: self.user).order(:created_at)
+    total_days = entries.length
+    days_completed = entries.where("word_count >= goal").length
+    num_lock = [entries.size - 1, total_days - days_completed].min.to_i
+
+    return self.created_at <= entries[num_lock-1].created_at
+
   end
 
   private
@@ -32,14 +40,5 @@ class Entry < ActiveRecord::Base
     # when seeding records, remember to update_word_count_and_preview
   end
 
-  def locked
-    entries = Entry.where(user: self.user).order(:created_at)
-    total_days = entries.length
-    days_completed = entries.where("word_count >= goal").length
-    num_lock = [entries.size - 1, total_days - days_completed].min.to_i
-
-    self.created_at <= entries[num_lock-1].created_at
-
-  end
 
 end

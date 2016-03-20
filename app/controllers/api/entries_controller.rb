@@ -18,7 +18,7 @@ class Api::EntriesController < ApplicationController
     if @entry && !@entry.locked
       render json: @entry
     else
-      render json: {error: 'Your entry is locked.'}, status: 401
+      render json: {error: 'This entry is locked.'}, status: 401
     end
   end
 
