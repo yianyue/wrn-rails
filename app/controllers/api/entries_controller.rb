@@ -14,11 +14,10 @@ class Api::EntriesController < ApplicationController
   def show
     @entry = current_user.entries
     @entry = @entry.find(params[:id])
-    # TODO: write a custom accessor for locked.
-    if @entry && !@entry.locked
-      render json: @entry
+    if @entry.locked
+      render json: {error: 'This entry is locked.'}, status: 401
     else
-      render json: {error: 'Your entry is locked.'}, status: 401
+      render json: @entry
     end
   end
 
@@ -26,10 +25,8 @@ class Api::EntriesController < ApplicationController
     # @entries = []
     @entry = Entry.find(params[:id])
     # if @entry.created_at.to_date == Date.today
-      @entry.update(entry_params)
-      @entries = Entry.set_lock(@entry.user.entries)
-      @entries << @entry
-      render json: @entries.as_json(only: [:id, :created_at, :preview, :word_count, :goal, :locked]), status: 200
+    @entry.update(entry_params)
+    render json: @entry.as_json(only: [:id, :created_at, :preview, :word_count, :goal, :locked]), status: 200
     # else
     #   render json: @entry.as_json(only: [:id, :created_at, :preview, :word_count, :goal, :locked]), status: 401
     # end
@@ -38,7 +35,7 @@ class Api::EntriesController < ApplicationController
   protected
 
   def entry_params
-    params.require(:entry).permit(:content)
+    params.require(:data).permit(:content)
   end
 
 end

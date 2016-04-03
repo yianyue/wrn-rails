@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  
+
   # root to: 'home#index'
-  
+
   namespace :api, defaults: {format: :json} do
     # Directs /api/entries/* to Api::EntriesController
     # (app/controllers/api/entries_controller.rb)
@@ -9,6 +9,10 @@ Rails.application.routes.draw do
     resources :users, only: [:create]
     resource :user, only: [:update]
     resource :session, only: [:create, :destroy]
+  end
+
+  namespace :test do
+    resources :routes, only: [:index, :update]
   end
 
 end

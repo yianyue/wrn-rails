@@ -1,0 +1,19 @@
+<div class="container">
+  <h1>Testing Doc</h1>
+  <div>
+    <div class="form-group" id="parameters">
+      <label>Host</label>
+      <input class="form-control" name="host" value="<%=request.host_with_port%>" disabled />
+    </div>
+    <div id="header">
+      <div class="form-group" >
+        <label>Email</label><input class="form-control" name="email" value="kafka@gmail.com" />
+      </div>
+      <div class="form-group" >
+        <label>Token</label><input class="form-control" name="token" value="a1724f23-7fa0-450c-ac71-fba9e9ab9f88" />
+      </div>
+    </div>
+  </div>
+
+  <%= render @routes %>
+</div>
