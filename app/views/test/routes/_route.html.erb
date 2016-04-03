@@ -1,0 +1,14 @@
+<div>
+  <%= route.method %> <%= route.path %>
+  <button type="button" class="request" data-method="<%= route.method %>" data-path="<%= route.path %>" >
+    Go
+  </button>
+  <% if route.path.include?(':')%>
+  <div>
+    <span><%= route.path.split(':').last %></span>
+    <input id="<%= route.path %>" name="<%= route.path.split(':').last %>" type="text" />
+  </div>
+  <%end%>
+  <div class="response">
+  </div>
+</div>
