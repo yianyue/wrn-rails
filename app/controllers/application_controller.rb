@@ -6,7 +6,6 @@ class ApplicationController < ActionController::Base
 
   rescue_from ActiveRecord::RecordNotFound, :with => :record_not_found
 
-
   def current_user
     @current_user ||= User.find_by(email: request.headers['email'])
     # @current_user = User.find_by(email: 'kafka@gmail.com')

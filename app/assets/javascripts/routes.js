@@ -13,6 +13,7 @@ $('document').ready(function() {
     var index = $button.data('index');
     var $container = $('#'+index);
     // var inputs = $('#parameters input');
+
     // var required = {};
     // for (var i = 0; i < inputs.length; i++){
     //   required[$(inputs[i]).attr("name")] = ($(inputs[i]).val());
@@ -41,6 +42,7 @@ $('document').ready(function() {
       $container.find('.response').html('<pre class="panel">' + JSON.stringify(response, null, 2) + '</pre>')
     }).fail( function(error) {
       $container.find('.response').html('<pre class="panel panel-danger">' + JSON.stringify(error, null, 2) + '</pre>')
+
     })
   }
 
