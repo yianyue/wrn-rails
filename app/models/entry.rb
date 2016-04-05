@@ -3,7 +3,6 @@ class Entry < ActiveRecord::Base
   # attr_accessor :locked
 
   belongs_to :user
-
   before_create :set_default
   before_update :update_word_count_and_preview, if: :content_changed?
 
