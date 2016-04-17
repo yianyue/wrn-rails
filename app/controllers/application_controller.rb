@@ -8,7 +8,6 @@ class ApplicationController < ActionController::Base
 
   def current_user
     @current_user ||= User.find_by(email: request.headers['email'])
-    # @current_user = User.find_by(email: 'kafka@gmail.com')
   end
 
   def authenticate_user
@@ -17,12 +16,12 @@ class ApplicationController < ActionController::Base
       true
     else
       p @user.token
-      render json: {error: 'You are not authorized to access this page. Please login.'}, status: 401
+      render json: {error: 'You are not authorized to access this page. Please login.'}, status: :unauthorized
     end
   end
 
   def record_not_found
-    render json: {error: 'Record does not exist.'}, status: 404
+    render json: {error: 'Record does not exist.'}, status: :not_found
   end
 
   helper_method :current_user, :authenticate_user

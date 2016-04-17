@@ -19,8 +19,6 @@ class Entry < ActiveRecord::Base
 
   end
 
-  private
-
   def update_word_count_and_preview
     # update_columns skips callback and validation
     # otherwise it goes into a callback loop
@@ -31,6 +29,8 @@ class Entry < ActiveRecord::Base
     self.update_columns(preview: text)
   end
 
+  private
+
   def set_default
     # TODO: update_attributes
     self.goal = self.user.goal
@@ -39,6 +39,5 @@ class Entry < ActiveRecord::Base
     self.preview = ''
     # when seeding records, remember to update_word_count_and_preview
   end
-
 
 end

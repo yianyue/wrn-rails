@@ -12,11 +12,11 @@ User.delete_all
 
 users = User.create([
   {
-    name: 'Yi An',
-    email: 'yianyue@gmail.com',
-    goal: 3,
-    password: 'password',
-    password_confirmation: 'password'
+    "name": "Yi An",
+    "email": "yianyue@gmail.com",
+    "goal": 3,
+    "password": "password",
+    "password_confirmation": "password"
   },
   {
     name: 'Franz',

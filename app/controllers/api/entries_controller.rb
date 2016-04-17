@@ -8,28 +8,18 @@ class Api::EntriesController < ApplicationController
     Entry.create(user: current_user) if @entries.empty?
     # TODO: time zone
     @entries << Entry.create(user: current_user) if @entries.last.created_at.to_date < Date.today
-    render json: @entries.as_json(only: [:id, :created_at, :preview, :word_count, :goal, :locked]), status: 200
   end
 
   def show
     @entry = current_user.entries
     @entry = @entry.find(params[:id])
-    if @entry.locked
-      render json: {error: 'This entry is locked.'}, status: 401
-    else
-      render json: @entry
-    end
+    render json: {error: 'This entry is locked.'}, status: :unauthorized if @entry.locked
   end
 
   def update
     # @entries = []
     @entry = Entry.find(params[:id])
-    # if @entry.created_at.to_date == Date.today
-    @entry.update(entry_params)
-    render json: @entry.as_json(only: [:id, :created_at, :preview, :word_count, :goal, :locked]), status: 200
-    # else
-    #   render json: @entry.as_json(only: [:id, :created_at, :preview, :word_count, :goal, :locked]), status: 401
-    # end
+    @entry.update(entry_params) if @entry.created_at.to_date == Date.today
   end
 
   protected
