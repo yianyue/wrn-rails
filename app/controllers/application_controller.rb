@@ -22,11 +22,14 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  private
+
   def record_not_found
     render json: {error: 'Record does not exist.'}, status: :not_found
-  end  
+  end
 
   def user_time_zone(&block)
+    # what happens if a user changes their time zone?
     Time.use_zone(current_user.time_zone, &block)
   end
 

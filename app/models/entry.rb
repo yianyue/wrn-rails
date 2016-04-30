@@ -14,9 +14,7 @@ class Entry < ActiveRecord::Base
     total_days = entries.length
     days_completed = entries.where("word_count >= goal").length
     num_lock = [entries.size - 1, total_days - days_completed].min.to_i
-
-    return self.created_at <= entries[num_lock-1].created_at
-
+    return self.created_at < entries[num_lock].created_at
   end
 
   def update_word_count_and_preview
@@ -34,6 +32,7 @@ class Entry < ActiveRecord::Base
   def set_default
     # TODO: update_attributes
     self.goal = self.user.goal
+    self.time_zone = self.user.time_zone
     self.content = self.content || ''
     self.word_count = 0
     self.preview = ''

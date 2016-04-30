@@ -16,6 +16,7 @@ class Api::UsersController < ApplicationController
 
   def update
     @user = current_user
+    byebug
     @user.attributes = user_params
     render json: @user.errors, status: :bad_request unless @user.save
   end
@@ -23,7 +24,7 @@ class Api::UsersController < ApplicationController
   protected
 
   def user_params
-    params.require(:data).permit(:password, :password_confirmation, :name, :email, :goal)
+    params.require(:data).permit(:password, :password_confirmation, :name, :email, :goal, :time_zone)
   end
 
 end

@@ -5,7 +5,7 @@ class Api::EntriesController < ApplicationController
   def index
     @entries = current_user.entries.order(created_at: :desc)
     # @entries.where(word_count: 0).delete_all. NOTE: do not delete. need to track goals
-    Entry.create(user: current_user) if @entries.empty? || @entries.first.created_at < Date.current.in_time_zone
+    Entry.create(user: current_user) if @entries.empty? || @entries.first.created_at.to_date < Date.current
   end
 
   def show
@@ -17,7 +17,7 @@ class Api::EntriesController < ApplicationController
   def update
     # @entries = []
     @entry = Entry.find(params[:id])
-    @entry.update(entry_params) if @entry.created_at.to_date == Date.today
+    @entry.update(entry_params) if @entry.created_at.to_date == Date.current.in_time_zone
   end
 
   protected

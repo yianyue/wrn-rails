@@ -422,7 +422,7 @@ against the door and listening.\r\n
 contents_1.each_index{|i|
   user = User.first
   e = Entry.create(user: user, content: contents_1[i])
-  e.created_at = (i).days.ago.in_time_zone(user.time_zone)
+  e.created_at = (i+1).days.ago.in_time_zone(user.time_zone)
   e.save
   e.update_word_count_and_preview
 }
