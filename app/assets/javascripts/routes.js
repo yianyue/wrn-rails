@@ -8,21 +8,27 @@ $('document').ready(function() {
     }
 
     var $button = $(this);
-    var path = $button.data('path');
-    var method = $button.data('method');
+
     var index = $button.data('index');
     var $container = $('#'+index);
+
+    var path = $container.find('input.path').val();
+
+    var method = $button.data('method');
+
+    debugger
+
     // var inputs = $('#parameters input');
     // var required = {};
     // for (var i = 0; i < inputs.length; i++){
     //   required[$(inputs[i]).attr("name")] = ($(inputs[i]).val());
     // }
 
-    if (path.match(/:/g)){
-      var paramName = path.split(':')[1];
-      var param = $container.find('input.params').val();
-      path = path.split(':')[0] + param;
-    }
+    // if (path.match(/:/g)){
+    //   var paramName = path.split(':')[1];
+    //   var param = $container.find('input.params').val();
+    //   path = path.split(':')[0] + param;
+    // }
 
 
     var ajaxOptions = {
@@ -45,7 +51,8 @@ $('document').ready(function() {
   }
 
   if($('body.test').length){
-    $("button.request").click( function() {
+    $(".request").click( function() {
+      console.log('request clicked')
       callApi.bind(this)()
     })
   }

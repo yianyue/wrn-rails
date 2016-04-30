@@ -1,28 +1,33 @@
 <%
-  label_color = 'success'
-  label_color = 'danger' if route.method.include?('DELETE')
-  label_color = 'info' if route.method.include?('PUT')
-  label_color = 'warning' if route.method.include?('POST')
+label_color = 'success'
+label_color = 'danger' if route.method.include?('DELETE')
+label_color = 'info' if route.method.include?('PUT')
+label_color = 'warning' if route.method.include?('POST')
 %>
 <div class="well" id="<%= route_counter %>">
   <div class="container-fluid">
     <div class="row">
-      <h4>
-        <span class="label label-<%=label_color%>"><%= route.method %></span> <%= route.path %>
-        <button type="button" class="request btn btn-default" data-method="<%= route.method %>" data-path="<%= route.path %>" data-index="<%= route_counter %>">
-          Go
-        </button>
+      <h4 class="form-inline">
+        <div class="form-group">
+          <div class="input-group">
+            <div class="input-group-addon"><%= route.method %></div>
+            <input type="text" class="form-control path" value=<%= route.path %>>
+            <div class="input-group-addon btn btn-default request" data-method="<%= route.method %>" data-index="<%= route_counter %>">
+              Go
+            </div>
+          </div>
+        </div>
       </h4>
     </div>
 
-    <% if route.path.include?(':')%>
+    <!-- <% if route.path.include?(':')%>
     <div class="form-group">
       <div class="form-inline" >
         <label><%= route.path.split(':').last %></label>
         <input class="params form-control" name="<%= route.path.split(':').last %>" type="text" />
       </div>
     </div>
-    <% end %>
+    <% end %> -->
 
     <% if !route.method.include?('GET') %>
     <div class="form-group">

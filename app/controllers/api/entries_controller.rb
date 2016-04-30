@@ -3,9 +3,11 @@ class Api::EntriesController < ApplicationController
   before_action :authenticate_user
 
   def index
-    @entries = current_user.entries.order(created_at: :desc)
+
+    page = params[:page] || 1;
+    @entries = current_user.entries.order(created_at: :desc).page(page).per(2)
     # @entries.where(word_count: 0).delete_all. NOTE: do not delete. need to track goals
-    Entry.create(user: current_user) if @entries.empty? || @entries.first.created_at.to_date < Date.current
+    Entry.create(user: current_user) if page.to_i === 1 &&  (@entries.empty? || @entries.first.created_at.to_date < Date.current)
   end
 
   def show
@@ -17,7 +19,7 @@ class Api::EntriesController < ApplicationController
   def update
     # @entries = []
     @entry = Entry.find(params[:id])
-    @entry.update(entry_params) if @entry.created_at.to_date == Date.current.in_time_zone
+    @entry.update(entry_params) if @entry.created_at.to_date >= Date.current
   end
 
   protected
