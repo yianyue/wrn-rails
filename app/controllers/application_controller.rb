@@ -6,6 +6,8 @@ class ApplicationController < ActionController::Base
 
   rescue_from ActiveRecord::RecordNotFound, :with => :record_not_found
 
+  around_filter :user_time_zone, :if => :current_user
+
   def current_user
     @current_user ||= User.find_by(email: request.headers['email'])
   end
@@ -22,6 +24,10 @@ class ApplicationController < ActionController::Base
 
   def record_not_found
     render json: {error: 'Record does not exist.'}, status: :not_found
+  end  
+
+  def user_time_zone(&block)
+    Time.use_zone(current_user.time_zone, &block)
   end
 
   helper_method :current_user, :authenticate_user

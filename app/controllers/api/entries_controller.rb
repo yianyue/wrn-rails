@@ -3,11 +3,9 @@ class Api::EntriesController < ApplicationController
   before_action :authenticate_user
 
   def index
-    @entries = current_user.entries.order(:created_at)
-    # @entries.where(word_count: 0).delete_all. NOTE: do not delete. need to track word_counts
-    Entry.create(user: current_user) if @entries.empty?
-    # TODO: time zone
-    @entries << Entry.create(user: current_user) if @entries.last.created_at.to_date < Date.today
+    @entries = current_user.entries.order(created_at: :desc)
+    # @entries.where(word_count: 0).delete_all. NOTE: do not delete. need to track goals
+    Entry.create(user: current_user) if @entries.empty? || @entries.first.created_at < Date.current.in_time_zone
   end
 
   def show

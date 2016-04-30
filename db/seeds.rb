@@ -16,15 +16,25 @@ users = User.create([
     "email": "yianyue@gmail.com",
     "goal": 3,
     "password": "password",
-    "password_confirmation": "password"
+    "password_confirmation": "password",
+    "time_zone": "Pacific Time (US & Canada)",
   },
   {
     name: 'Franz',
     email: 'kafka@gmail.com',
     goal: 500,
     password: 'password',
-    password_confirmation: 'password'
+    password_confirmation: 'password',
+    time_zone: 'Beijing'
   },
+  {
+    name: 'Jane',
+    email: 'jame@gmail.com',
+    goal: 10,
+    password: 'password',
+    password_confirmation: 'password',
+    time_zone: 'Eastern Time (US & Canada)'
+  }
 ])
 
 contents_1 = [
@@ -410,16 +420,18 @@ against the door and listening.\r\n
 ]
 
 contents_1.each_index{|i|
-  e = Entry.create(user: User.first, content: contents_1[i])
-  e.created_at = (i).days.ago
+  user = User.first
+  e = Entry.create(user: user, content: contents_1[i])
+  e.created_at = (i).days.ago.in_time_zone(user.time_zone)
   e.save
   e.update_word_count_and_preview
 }
 
 contents_2 = contents_2.reverse
 contents_2.each_index{|i|
-  e = Entry.create(user: User.second, content: contents_2[i])
-  e.created_at = (i).days.ago
+  user = User.second
+  e = Entry.create(user: user, content: contents_2[i])
+  e.created_at = (i).days.ago.in_time_zone(user.time_zone)
   e.save
   e.update_word_count_and_preview
 }
