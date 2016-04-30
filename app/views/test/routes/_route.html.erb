@@ -7,36 +7,29 @@ label_color = 'warning' if route.method.include?('POST')
 <div class="well" id="<%= route_counter %>">
   <div class="container-fluid">
     <div class="row">
+
       <h4 class="form-inline">
+        <div class="btn btn-<%= label_color %> request" data-method="<%= route.method %>" data-index="<%= route_counter %>">
+          <%= route.method %>
+        </div>
         <div class="form-group">
           <div class="input-group">
-            <div class="input-group-addon"><%= route.method %></div>
-            <input type="text" class="form-control path" value=<%= route.path %>>
-            <div class="input-group-addon btn btn-default request" data-method="<%= route.method %>" data-index="<%= route_counter %>">
-              Go
-            </div>
+            <input type="text" class="form-control path" value=<%= route.path %> />
           </div>
         </div>
+
       </h4>
     </div>
-
-    <!-- <% if route.path.include?(':')%>
-    <div class="form-group">
-      <div class="form-inline" >
-        <label><%= route.path.split(':').last %></label>
-        <input class="params form-control" name="<%= route.path.split(':').last %>" type="text" />
-      </div>
-    </div>
-    <% end %> -->
 
     <% if !route.method.include?('GET') %>
     <div class="form-group">
       <label>Post Data</label>
-      <textarea class="post-data form-control" type="text">
-      </textarea>
+      <textarea class="post-data form-control" type="text"></textarea>
     </div>
     <% end %>
 
     <div class="response"></div>
+
   </div>
+
 </div>

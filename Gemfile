@@ -8,9 +8,9 @@ gem 'rails', '4.2.3'
 # Use postgresql for deploymment
 gem 'pg'
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0'
-gem 'bootstrap-sass', '~> 3.2.0'
-gem 'autoprefixer-rails'
+# gem 'sass-rails', '~> 5.0'
+# gem 'bootstrap-sass', '~> 3.2.0'
+# gem 'autoprefixer-rails'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
