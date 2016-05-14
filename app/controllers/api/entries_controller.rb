@@ -18,8 +18,13 @@ class Api::EntriesController < ApplicationController
 
   def update
     # @entries = []
-    @entry = Entry.find(params[:id])
-    @entry.update(entry_params) if @entry.created_at.to_date >= Date.current
+    @entry = current_user.entries
+    @entry = @entry.find(params[:id])
+    if @entry.created_at.to_date === Date.current
+      @entry.update(entry_params)
+    else
+      render json:{ error: 'The day is over.'}, status: :unauthorized
+    end
   end
 
   protected

@@ -13,9 +13,7 @@ label_color = 'warning' if route.method.include?('POST')
           <%= route.method %>
         </div>
         <div class="form-group">
-          <div class="input-group">
-            <input type="text" class="form-control path" value=<%= route.path %> />
-          </div>
+          <input type="text" class="form-control path" value=<%= route.path %> />
         </div>
 
       </h4>

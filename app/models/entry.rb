@@ -20,7 +20,7 @@ class Entry < ActiveRecord::Base
   def update_word_count_and_preview
     # update_columns skips callback and validation
     # otherwise it goes into a callback loop
-    text_arr = self.content.gsub(/<.*?>/,' ').split
+    text_arr = self.content.split
     text = text_arr[0...15].join(' ')
     text += ' ...' if text_arr.size > 15
     self.update_columns(word_count: text_arr.size)
